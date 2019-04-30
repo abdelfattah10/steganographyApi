@@ -23,23 +23,23 @@ const app =  express();
 // }))
 
 
-var message_text = 'Hiiiii';
-var out_image = 'out.png';
-stego.encodeString('test.png', out_image, message_text, function(err){
-    if (err) { console.log('err'); }
-    console.log("Wrote png to: ", out_image);
-
-    //Now let's decode that.
-    stego.decode(out_image, message_text.length,function(payload){
-        console.log("Decoded message: ", payload);
-    });
-
-});
+// var message_text = 'Hiiiii';
+// var out_image = 'out.png';
+// stego.encodeString('test.png', out_image, message_text, function(err){
+//     if (err) { console.log('err'); }
+//     console.log("Wrote png to: ", out_image);
+//
+//     //Now let's decode that.
+//     stego.decode(out_image, message_text.length,function(payload){
+//         console.log("Decoded message: ", payload);
+//     });
+//
+// });
 
 
 
 app.get('/', (req, res) => {
-  console.log(img);
+  console.log('hello');
 })
 
 const port = process.env.PORT || 3000
